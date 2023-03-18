@@ -1,9 +1,15 @@
 import React from "react";
+import Header from "../src/content/Header";
+import MainContent from"../src/content/MainContent";
+import Footer from "../src/content/Footer";
 
 export default function App(){
     return (
-        <div>
-            <h1>Teste de função</h1>
-        </div>
+        <main>
+            <Header />
+            <MainContent />
+            <Footer />
+        </main>
+
     )
 }

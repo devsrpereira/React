@@ -3,6 +3,7 @@ import React from "react";
 export default function Header(){
     return(
         <header>
+        <img src="./react-logo.png" alt="teste"/>    
         <div class="hdr_img"></div>
         <h1 class="hdr_titulo">Veluma Santana</h1>
         <p class="hdr_sub">Modelo Fotografica</p>

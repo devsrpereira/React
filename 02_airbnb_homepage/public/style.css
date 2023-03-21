@@ -14,33 +14,24 @@ body, html{
     justify-content: center;
     align-items: center;
     font-family: inter, monospace;
-    background-color: white;
+    background-color: #fff;
 }
 .page{
-    width: 414px;
-    height: 896px;
+    width: 820px;
+    height: 1180px;
     margin: 0px;
-    background-color: black;
-    
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #635a5a;
 }
-header{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+header.hdr{
+    background-color: #fff;
     color: #fff;
-    height: 540px;
+    height: 130px;
+    border-bottom: 1px solid orange;
 }
-.hdr_img{
-    width: 420px;
-    height: 370px;
-    background-position: top center ;
-    background-repeat: no-repeat;
-    margin-bottom: 20px;
+header .hdr_img{
+    width: 200px;
+
+    background-size: cover;
 }
 .hdr_titulo{
     font-size: 35px;

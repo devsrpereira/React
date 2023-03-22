@@ -16,15 +16,25 @@ body, html{
     justify-content: center;
 }
 .page{
-    width: 100vw;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 } 
+
+
 .hdr{
+    display: flex;
+    width: 100vw;
     box-shadow: 0 2.5px 8px rgba(0, 0, 0, 0.361);
 }
 .hdr_img{
     width: 150px;
     padding: 15px;
 }
+
+
 .main_content{
     margin: 0 30px;
 }
@@ -32,20 +42,19 @@ body, html{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-left: 20px;
-
-}
-.main_imgs img{
-    width: 100px;
-    height: 210px;
-    margin: 0 15px 0 0;
-    border-radius: 20px;
+    padding-left: 100px;
 }
 .imgs_colum{
-    width: 115px;
+    width: 165px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1vw;
+}
+.main_imgs img{
+    width: 150px;
+    height: 210px;
+    margin: 0 1vw 0 0;
+    border-radius: 20px;
 }
 .imgs_colum01{
     display: flex;
@@ -72,28 +81,29 @@ body, html{
     flex-direction: column;
     margin-top: 70px;
 }
-
-
 .main_title{
     font-size: 3em;
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: -150px;
 }
 .main_prgf{
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: px;
+    margin-left: -130px;
     width: 400px;
     font-weight: lighter;
     font-size: 1.2em;
 }
 
+
 .card_carrosel{
-    width: 90vw;
+    width: 60vw;
     border: 1px solid black;
 
-    margin: 50px 0 0 70px;
+    margin: 50px 0 0 0px;
     display: flex;
-    gap: 20px;
+    justify-content: left;
+    align-content: center;
+    gap: 25px;
 }
 .card_carrosel img{
     width: 300px;
@@ -104,6 +114,10 @@ body, html{
     margin-top: 10px;
     font-size: 18px;
     margin-left: 5px;
+    color: #808080a1;
+}
+strong{
+    color: black;
 }
 ion-icon{
     color: red;
@@ -111,4 +125,36 @@ ion-icon{
 .card_prgf{
     width: 290px;
     margin: 7px;    
+}
+.card_price{
+    margin: 0 0 20px 7px;
+}
+
+/*GATOS*/
+.contacts_card{
+    display: flex;
+    gap: 20px;
+}
+.contacts{
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.304);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.contact-card{
+    text-align: center;
+}
+.contact-card img{
+    width: 250px;
+    border-radius: 8px;
+}
+.info-group{
+    text-align: left;
+}
+.contact-card h3{
+    margin: 10px 0;
+}
+.info-group p{
+    padding: 5px;
 }

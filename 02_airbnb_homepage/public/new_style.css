@@ -16,7 +16,7 @@ body, html{
     justify-content: center;
 }
 .page{
-    width: 95vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,68 +42,70 @@ body, html{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-left: 100px;
+    padding-left: 10vw;
+    
 }
 .imgs_colum{
-    width: 165px;
+    width: 10vw;
     display: flex;
     flex-direction: column;
     gap: 1vw;
+
 }
 .main_imgs img{
-    width: 150px;
-    height: 210px;
+    width: 9vw;
+    height: 13vw;
     margin: 0 1vw 0 0;
     border-radius: 20px;
 }
 .imgs_colum01{
     display: flex;
     flex-direction: column;
-    margin-top: 170px;
+    margin-top: 12vw;
 }
 .imgs_colum02{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 3vw;
 }
 .imgs_colum03{
     display: flex;
     flex-direction: column;
-    margin-top: 160px;
+    margin-top: 9vw;
 }
 .imgs_colum04{
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 2vw;
 }
 .imgs_colum05{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 4vw;
 }
 .main_title{
     font-size: 3em;
-    margin-top: 20px;
-    margin-left: -150px;
+    margin-top: 1.5vw;
+    margin-left: -10vw;
 }
 .main_prgf{
-    margin-top: px;
-    margin-left: -130px;
-    width: 400px;
+    margin-left: -9vw;
+    width: 24vw;
     font-weight: lighter;
     font-size: 1.2em;
 }
 
 
 .card_carrosel{
-    width: 60vw;
-    border: 1px solid black;
-
+    width: 70vw;
     margin: 50px 0 0 0px;
+    flex: 0 0 auto;
     display: flex;
     justify-content: left;
     align-content: center;
-    gap: 25px;
+    gap: 2vw;
+
+    overflow: hidden;
 }
 .card_carrosel img{
     width: 300px;

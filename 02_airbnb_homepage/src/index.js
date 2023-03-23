@@ -4,50 +4,33 @@ import Header from './Header';
 import MainContent from './MainContent';
 import Cards from './Cards'
 // import Contact from './Contact';
-import Cores from './Cores'
+// import Cores from './Cores'
+import data from './data';
+
 
 function App(){
+
+    const card = data.map(item =>{
+        return (
+            <Cards
+              key =  {item.id}
+              img = {item.img}
+              nota = {item.stats.nota}
+              votos = {item.stats.votos}
+              cidade = {item.cidade}
+              estado = {item.estado}
+              titulo = {item.titulo}
+              preço = {item.preço}
+          />
+        )
+    })
+    
   return(
     <div className='page'>
       <Header />
       <MainContent />
       <aside className="card_carrosel">
-          <Cards
-              img ="card_01.jpg"
-              nota = "5.0"
-              votos = {6}
-              cidade = "Itacaré"
-              estado = "BA"
-              titulo = "Os melhores bares da cidade estão aqui."
-              preço = {125}
-          />
-          <Cards
-              img ="card_02.jpg"
-              nota = "4.8"
-              votos = {7}
-              cidade = "Itacaré"
-              estado = "BA"
-              titulo = "Reuniões e Encontros Especiais tudoo que você precisatem aqui."
-              preço = {55}
-          />
-          <Cards
-              img ="card_03.jpg"
-              nota = "4.6"
-              votos = {22}
-              cidade = "Itacaré"
-              estado = "BA"
-              titulo = "A diversão é garantida nos grande parques da região."
-              preço = {75}
-          />
-          <Cards
-              img ="card_04.jpg"
-              nota = "4.9"
-              votos = {12}
-              cidade = "Itacaré"
-              estado = "BA"
-              titulo = "A incrivél hora do chá local, repleto de aromas e sabores."
-              preço = {49.90}
-          />
+          {card}
       </aside>
 {/*   <div className='contacts_card'>
         <Contact

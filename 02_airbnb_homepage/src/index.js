@@ -12,17 +12,11 @@ function App(){
 
     const card = data.map(item =>{
         return (
-            <Cards
-              key =  {item.id}
-              img = {item.img}
-              nota = {item.stats.nota}
-              votos = {item.stats.votos}
-              cidade = {item.cidade}
-              estado = {item.estado}
-              titulo = {item.titulo}
-              preço = {item.preço}
-          />
-        )
+        <Cards
+        key = {item.id}
+        item = {item}
+        // {...item}
+        />)
     })
     
   return(

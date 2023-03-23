@@ -55,15 +55,16 @@ export default function Cards(props){
     console.log(props)
     return (
         <div className="new_card">
+            {props.item.disponivel ===0 && <div className="soldout">SOLD OUT</div>}
             <div className="card_picture">
-                <img classname= "card_img" src={`../images/${props.img}`} alt="Error na Imagem"/>
+                <img classname= "card_img" src={`../images/${props.item.img}`} alt="Error na Imagem"/>
                 <span className="img_stick"></span>
             </div>
             <div className="card_score">
-                <p><ion-icon name="star"></ion-icon> <strong>{props.nota}</strong> {`(${props.votos})`} / {props.cidade}-{props.estado}</p>
+                <p><ion-icon name="star"></ion-icon> <strong>{props.item.stats.nota}</strong> {`(${props.item.stats.votos})`} / {props.item.cidade}-{props.item.estado}</p>
             </div>
-                <p className="card_prgf">{props.titulo}</p>
-                <p className="card_price"><strong>Apenas R${props.preço}</strong> / pessoa.</p>
+                <p className="card_prgf">{props.item.titulo}</p>
+                <p className="card_price"><strong>Apenas R${props.item.preço}</strong> / pessoa.</p>
         </div>
     )
 

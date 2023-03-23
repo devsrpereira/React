@@ -97,20 +97,28 @@ body, html{
 
 
 .card_carrosel{
-    width: 70vw;
+    width: 80vw;
     margin: 50px 0 0 0px;
     flex: 0 0 auto;
     display: flex;
     justify-content: left;
     align-content: center;
     gap: 2vw;
-
-    overflow: hidden;
+    position: relative;
 }
 .card_carrosel img{
     width: 300px;
     height: 500px;
-    border-radius: 35px;
+    border-radius: 18px;
+}
+.soldout{
+    position: absolute;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+    background-color: gainsboro;
+    margin: 10px;
+    border-radius: 5px;
 }
 .card_score{
     margin-top: 10px;

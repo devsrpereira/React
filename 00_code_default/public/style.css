@@ -1,0 +1,22 @@
+@charset "UTM-8";
+
+body, html{
+    text-align: center;
+}
+img{
+    width: 400px;
+    border-radius: 10px;
+    margin: 20px;
+}
+input{
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+input:hover{
+    background-color: #80808031;
+    image-resolution: 50%;
+}

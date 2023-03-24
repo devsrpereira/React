@@ -1,3 +1,7 @@
+import React from 'react'
+
+export default function Arrays(){
+
 //ESTUDANDO UM POUCO SOBRE ARRAY VAMOS EXPLORAR AS ATRIBUIÇÕES DE ALGUMAS FUNCTION.
 
 //.MAP()
@@ -37,3 +41,5 @@ const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
 
 const new_pokemon = pokemon.map((nome) =>{return `<p>${nome}</p>`}) 
 console.log(new_pokemon)
+
+}

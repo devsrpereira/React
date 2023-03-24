@@ -1,19 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import New_Element from './New_Element.js';
+
+
+
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(
-    <App />
+    <New_Element />
 );
-
-function App(){
-    return(
-        <div className='Page'>
-            <Arrays />
-        </div>
-    )
-}
-
-function Arrays (){
-    
-}

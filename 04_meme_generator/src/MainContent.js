@@ -1,30 +1,20 @@
 import React from 'react'
-// import data from './data';
 import memedata from './memedata'
 
 export default function MainContent(){
-    
-    // function getRandomArbitrary(min, max) {
-    //     const posiçoes = data.length()
-        
-    //     console.log(posiçoes)
 
-    //     return Math.random() * (max - min) + min;
-    //   }
-    
-    //   const num_random = getRandomArbitrary(0, posiçoes)
+    const memesArray = memedata.data.memes
+    const randomNumber = Math.floor(Math.random()*memesArray.length)
+    let url = memesArray[randomNumber].url
 
-    let url
+    const [image, setImage] = React.useState(url)
 
-    function getMemeImg(){
-        const memesArray = memedata.data.memes
+   
+    function GetMemeImg(){
         const randomNumber = Math.floor(Math.random()*memesArray.length)
-        url = memesArray[randomNumber].url
-        console.log(url)
-    }
-
-
-    
+        setImage(new_url => new_url = memesArray[randomNumber].url)
+    }    
+        
     return(
         <section className="main_content">
             <form className="main_form" action='#' method='get'>
@@ -32,9 +22,9 @@ export default function MainContent(){
                     <input className="form_text" placeholder="Top text" type="text" />
                     <input className="form_text" placeholder="Bottom text" type="text" />
                 </span>
-                <input className="form_button"type="button" onClick={getMemeImg} value="Get a new Meme image!" />
+                <input className="form_button"type="button" onClick={GetMemeImg} value="Get a new Meme image!" />
             </form>
-                 <img className="main_img" src= {url}></img>
+                 <img className="main_img" src= {image}></img>
 
         </section>
     )

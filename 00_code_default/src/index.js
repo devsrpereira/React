@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import New_Element from './New_Element.js';
+import Mais_e_Menos from './Mais_e_Menos';
 
 
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(
-    <New_Element />
+    <Mais_e_Menos />
 );

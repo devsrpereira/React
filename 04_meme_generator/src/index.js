@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 
 import Header from './Header';
 import MainContent from './MainContent';
-import data from './data';
 
 
 function App(){

@@ -94,14 +94,28 @@ button{
     flex-direction: column;
     align-items: center;
     gap: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.37);
+
 
 }
 .card_picture{
     background-color: gray;
+    border: 2px solid rgb(118, 244, 8);
     margin: 20px 0;
     width: 200px;
     height: 200px;
     border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    
+}
+.picture_img{
+    margin-top: -30px;
+    width: 240px;
+    height: 240px;
 }
 .card_content{
     display: flex;
@@ -115,6 +129,7 @@ button{
 .content_star{
     margin: 0;
     font-size: 2em;
+    cursor: pointer;
 }
 .content_name{
     font-size: 1.4em;

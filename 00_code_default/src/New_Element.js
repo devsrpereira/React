@@ -1,27 +1,22 @@
 import React from 'react'
 
-let txt
-const thingsArray = ["Thing 1", "Thing 2"]
-
 export default function New_Element(){
-    
-    // txt = thingsArray.map(thing => <p key = {thing}>{thing}</p>)
+
+    let coisa_inicial = ["Thing 1", "Thing 2"] 
+   
+    const [coisa, setCoisa] = React.useState(coisa_inicial)
+
 
     function Novo_item(){
-        const new_item = thingsArray.length + 1
-        const add = `Thing ${new_item}`
-        
-        thingsArray.push(`Thing ${new_item}`)
-     
-        txt = thingsArray.map(thing => <p key = {thing}>{thing}</p>)
 
-        console.log (txt)
+        setCoisa (prevState => [...prevState, `Thing ${prevState.length+1}`])
+
     }
-        
+               
     return (
         <div>
-            <button onClick={Novo_item}>Add Item</button>
-            {[txt]}
+            <button className="btn_coisa" onClick={Novo_item}>Add Item</button>
+            {coisa}
         </div>
     )
 }

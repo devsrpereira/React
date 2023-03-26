@@ -2,17 +2,18 @@ import React from 'react'
 
 export default function YesorNot(){
 
-    const [result, setResult] = React.useState("YES")
+    const [isGoimgOut, setisGoimgOut] = React.useState(true)
 
-    function handleClick(){
-        setResult("No")
+    function handleClick (){
+        setisGoimgOut(prevState => !prevState)
     }
-    
+
+
     return(
         <div className='state'>
             <h1 className='state_title'>Is state important to know?</h1>
             <div className='state_value' onClick={handleClick}>
-                <h1>{result}</h1>
+                <h1>{isGoimgOut ? "Yes" : "No"}</h1>
             </div>
 
         </div>

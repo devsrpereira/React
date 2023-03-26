@@ -14,13 +14,13 @@ export default function Personal_Card(){
 return(
     <div className='card_page'>
         <div className='card_picture'>
-            <img src='#' />
+            <img src='https://1drv.ms/i/s!AjZLahQvN68hfAOkEUCcJ8ByCRQ?e=aIuLQr' />
         </div>
-        <div ClassName='card_content'>
-            <p clasName='card_star'><ion-icon clasName='card_star' name="star-outline"></ion-icon></p>
-            <h1 className='card_name'>NAME</h1>
-            <p className='card_phone'>PHONE NUMBER</p>
-            <p className='card_email'></p>
+        <div className ='card_content'>
+            <p className ='content_star'><ion-icon name="star-outline"></ion-icon></p>
+            <h1 className ='content_name'>NAME</h1>
+            <p className ='content_phone'>PHONE NUMBER</p>
+            <p className ='content_email'>EMAIL</p>
         </div>
     </div>
 

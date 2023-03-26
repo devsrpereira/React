@@ -12,11 +12,13 @@ export default function New_Element(){
         setCoisa (prevState => [...prevState, `Thing ${prevState.length+1}`])
 
     }
-               
+        const txt = coisa.map(thing => <p key = {thing}>{thing}</p>)
+
+        
     return (
         <div>
             <button className="btn_coisa" onClick={Novo_item}>Add Item</button>
-            {coisa}
+            <p>{txt}</p>
         </div>
     )
 }

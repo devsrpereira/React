@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import New_Element from './New_Element';
+import Personal_Card from './Personal_Card';
 
 
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(
-    <New_Element />
+    <Personal_Card />
 );

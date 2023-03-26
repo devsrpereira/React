@@ -2,9 +2,7 @@ import React from 'react'
 
 export default function New_Element(){
 
-    let coisa_inicial = ["Thing 1", "Thing 2"] 
-   
-    const [coisa, setCoisa] = React.useState(coisa_inicial)
+    const [coisa, setCoisa] = React.useState(["Thing 1", "Thing 2"] )
 
 
     function Novo_item(){

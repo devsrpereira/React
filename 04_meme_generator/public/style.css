@@ -58,7 +58,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.form_text_top, .form_text_btm {
+#form_text_top, #form_text_btm {
     height: 50px;
     width: 25vw;
     font-size: 20px;
@@ -88,10 +88,12 @@ header{
     width: 100%;
     font-family: 'Poppins';
     margin: auto;
+    overflow: hidden;
 }
 .meme_img{
     width: 100%;
     height: auto;
+    max-height: 470px;
 }
 .meme_toptext, .meme_topBottom{
     position: absolute;
@@ -101,9 +103,9 @@ header{
     text-shadow:10px 2px 0px black;
 }
 .meme_toptext{
-    left: 23%;
+    left: 22vw;
 }
 .meme_topBottom{
     bottom: 5%;
-    right: 27%;
+    right: 27vw;
 }

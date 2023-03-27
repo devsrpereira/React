@@ -12,11 +12,12 @@ export default function Personal_Card(){
     })
 
     function put_favorit(){
-        setContact.isFavorit(prevState => !prevState)
-        
-    }
-    
-    
+        setContact(prevState => ({
+            ...prevState,
+                isFavorit: !prevState.isFavorit
+            }))
+    }    
+
 
 return(
     <div className='card_page'>
@@ -25,10 +26,7 @@ return(
         </div>
         <div className ='card_content'>
             <p className ='content_star' onClick={put_favorit}><ion-icon 
-            name={contact.isFavotit ? "star" : "star-outline"}></ion-icon></p>
-
-           
-
+            name={contact.isFavorit ? "star" : "star-outline"}></ion-icon></p>
             <h1 className ='content_name'>{`${contact.firstName} ${contact.lastName}`}</h1>
             <p className ='content_phone'>{contact.phone} </p>
             <p className ='content_email'>{contact.email}</p>

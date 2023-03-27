@@ -1,4 +1,5 @@
 import React from 'react'
+import Count from './Count'
 
 export default function Mais_e_Menos(){
 
@@ -9,17 +10,19 @@ export default function Mais_e_Menos(){
     }
 
     function diminuir(){
-        setCount (precount => precount - 1)
+        setCount (precount => precount - 1) 
     }
+
+
 
     return(
         <div className='counter'>
             <button className='counter_minus' onClick={diminuir}>-</button>
-            <div className='counter_count'>
-                <h1>{count}</h1>
-            </div>
+            <Count number={count}/>
             <button className='counter_plus' onClick={somar}>+</button>
 
         </div>
     )
 }
+
+   

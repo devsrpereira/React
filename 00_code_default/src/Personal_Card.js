@@ -1,4 +1,5 @@
 import React from 'react'
+import Star from './Star'
 
 export default function Personal_Card(){
 
@@ -8,10 +9,10 @@ export default function Personal_Card(){
         phone: "+55 (11) 994104833",
         email: "srdevpereira@gmail.com",
         picture:"foto_perfil01.jpg",
-        isFavorit: false,
+        isFavorit: true,
     })
 
-    function put_favorit(){
+    function Marcar_Favorito(){
         setContact(prevState => ({
             ...prevState,
                 isFavorit: !prevState.isFavorit
@@ -22,11 +23,10 @@ export default function Personal_Card(){
 return(
     <div className='card_page'>
         <div className='card_picture'>
-            <img className='picture_img' src= {`../images/${contact.picture}`} />
+            <img className='picture_img' src= {`../images/${contact.picture}`} alt="Perfil" />
         </div>
         <div className ='card_content'>
-            <p className ='content_star' onClick={put_favorit}><ion-icon 
-            name={contact.isFavorit ? "star" : "star-outline"}></ion-icon></p>
+            <Star isFilled={contact.isFavorit} handleClik={Marcar_Favorito} />
             <h1 className ='content_name'>{`${contact.firstName} ${contact.lastName}`}</h1>
             <p className ='content_phone'>{contact.phone} </p>
             <p className ='content_email'>{contact.email}</p>

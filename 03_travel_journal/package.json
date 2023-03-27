@@ -1,6 +1,7 @@
 {
   "name": "03_travel_journal",
   "version": "0.1.0",
+  "homepage": "03_travel_journal/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

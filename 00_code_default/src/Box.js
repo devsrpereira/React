@@ -6,19 +6,18 @@ export default function Box(){
     const [squares, setSquares] = React.useState(box_data)
 
     function toggle(id){
-        setSquares(prevSquares => {
-            return prevSquares.map((square) => {
+        setSquares(prevSquares =>{
+            return prevSquares.map((square) =>{
                 return square.id === id ? {...square, on: !square.on} : square
             })
         })
     }
-    
-    const elemento_criado = squares.map(square => (
+
+        const elemento_criado = squares.map(square => (
        <BoxSquare  
         key = {square.id} 
-        id = {square.id} 
         on = {square.on}
-        toggle = {toggle}
+        toggle = {()=>toggle(square.id)} 
         
         />
     ))

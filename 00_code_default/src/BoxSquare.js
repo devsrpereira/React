@@ -11,7 +11,7 @@ export default function BoxSquare(props){
         <div 
             style={styles} 
             className='botao' 
-            onClick={() => props.toggle(props.id)}
+            onClick={props.toggle}
         >
         </div>
     )

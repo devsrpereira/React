@@ -19,7 +19,7 @@ input{
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
-    border: none;
+    /* border: none; */
 }
 input:hover{
     background-color: #80808031;

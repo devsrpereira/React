@@ -5,9 +5,17 @@ import BoxSquare from './BoxSquare'
 export default function Box(){
     const [square, setBox] = React.useState(box_data)
 
+    function toggle(){
+        console.log('Clicked!')
+    }
     
     const elemento_criado = square.map(square => (
-       <BoxSquare  key = {square.id} on = {square.on} />
+       <BoxSquare  
+        key = {square.id} 
+        on = {square.on}
+        toggle = {toggle}
+        
+        />
     ))
     
     return(

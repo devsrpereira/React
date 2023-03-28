@@ -144,3 +144,17 @@ button{
     padding: 2px 0;
 }
 
+/*BOX liga e desliga*/
+
+.botao{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.336);
+}
+
+
+

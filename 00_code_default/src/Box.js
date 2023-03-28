@@ -3,15 +3,20 @@ import box_data from './box_data'
 import BoxSquare from './BoxSquare'
 
 export default function Box(){
-    const [square, setBox] = React.useState(box_data)
+    const [squares, setSquares] = React.useState(box_data)
 
-    function toggle(){
-        console.log('Clicked!')
+    function toggle(id){
+        setSquares(prevSquares => {
+            return prevSquares.map((square) => {
+                return square.id === id ? {...square, on: !square.on} : square
+            })
+        })
     }
     
-    const elemento_criado = square.map(square => (
+    const elemento_criado = squares.map(square => (
        <BoxSquare  
         key = {square.id} 
+        id = {square.id} 
         on = {square.on}
         toggle = {toggle}
         

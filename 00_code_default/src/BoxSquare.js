@@ -3,11 +3,10 @@ import Box from './Box'
 
 export default function BoxSquare(props){
     const [on, setOn] = React.useState(props.on)
-
-    
+  
     
     const styles = {
-        backgroundColor: on ? "#222222" : "trasparent",
+        backgroundColor: on ? "#222222" : "transparent",
         cursor: "pointer",
     }
     

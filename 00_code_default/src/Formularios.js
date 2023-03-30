@@ -24,7 +24,8 @@ export default function Formularios(){
     }    
 
     function handleSubmit(event){
-        event.preventDefault()
+        // event.preventDefault()
+        //http://localhost:3000/?firstName=SAULO&lastName=PEREIRA&eMail=saulopereira.83%40gmail.com&coMments=TESTANDO+O+CAMPO+AREA&isFriendly=on&employment=part-time&favColor=indigo
         // submitToApi(formData)
         console.log(formData)
     }
@@ -125,8 +126,10 @@ export default function Formularios(){
                     <option value = 'violet' >Violet</option>
                 </select>
                 <br/>
-                <input type = 'submit' value = 'Submit' />
-                
+                <input 
+                    type = 'submit' 
+                    value = 'Submit'
+                />
             </form>
             
         </div>

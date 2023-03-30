@@ -4,6 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontInter: 'Inter';
+    --fontPoppins: 'Poppins';
+    --fontNoto: 'Noto Sans';
+}
+
 
 body, html{
     text-align: center;
@@ -167,3 +178,60 @@ label{
     margin: 0;
 }
 
+
+/*SIGN UP*/
+body{
+    background-color: #592c8d;
+}
+.sign_page{
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.347);
+    margin-top: 20px;
+    padding-top: 30px;
+}
+
+.sign_inp{
+    width: 200px;
+    height: max-content;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.587);
+    border-radius: 7px;
+}
+.sign_flex{
+    margin-left: 50px;
+    margin-top: 12px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+}
+.sign_ckd{
+    width: 20px;
+}
+.sign_label{
+    font-family: var(--fontPoppins);
+    font-weight:bold;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 15px ;
+}
+.sign_btn{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 14px;
+    border-radius: 8px;
+    color:#fff;
+    background-color: #592c8d;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.235);
+}
+.sign_btn:hover{
+    background-color: #402165;
+}

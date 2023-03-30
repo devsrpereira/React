@@ -23,7 +23,7 @@ export default function MainContent(){
             setMeme(prevMeme =>{
                 return{
                     ...prevMeme,
-                    [name]: value 
+                    [name]: value
                 }
             })
     }
@@ -58,9 +58,9 @@ export default function MainContent(){
                 />
             </form>
             <div className="meme_picture">
-                <p className = "meme_toptext"> {meme.top_text} </p>
+                <p className = "meme_toptext"> {meme.top_text.toUpperCase()} </p>
                 <img className="meme_img" src= {meme.random_img} alt="Meme"/>
-                <p className = "meme_topBottom">{meme.bottom_text}</p>
+                <p className = "meme_topBottom">{meme.bottom_text.toUpperCase()}</p>
             </div>    
         </section>
     )

@@ -58,7 +58,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-#form_text_top, #form_text_btm {
+.form_text_top, .form_text_btm {
     height: 50px;
     width: 25vw;
     font-size: 20px;

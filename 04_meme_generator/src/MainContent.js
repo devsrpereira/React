@@ -4,14 +4,10 @@ import memedata from './memedata'
 export default function MainContent(){
 
     const memesArray = memedata.data.memes
-    const randomNumber = Math.floor(Math.random()*memesArray.length)
-    let url = memesArray[randomNumber].url
-    const text_top = document.querySelector("input#form_text_top")
-    const text_btm = document.querySelector("input#form_text_btm")
 
     const [meme, setMeme] = React.useState({
-        top_text: "Top text",
-        bottom_text: "Bottom text",
+        top_text: "",
+        bottom_text: "",
         random_img: "http://i.imgflip.com/1bij.jpg",
     })
 
@@ -22,12 +18,14 @@ export default function MainContent(){
                 random_img:  [memesArray[randomNumber].url] }))
     }    
 
-    function Put_text(){
-            setMeme(prevState => ({
-                ...prevState,
-                top_text: [text_top.value],
-                bottom_text: [text_btm.value],
-            }))
+    function handleOnChange(event){
+            const{name, value} = event.target
+            setMeme(prevMeme =>{
+                return{
+                    ...prevMeme,
+                    [name]: value 
+                }
+            })
     }
 
 
@@ -35,10 +33,29 @@ export default function MainContent(){
         <section className="main_content">
             <form className="main_form" action='#' method='get'>
                 <span className="form_texts">
-                    <input id='form_text_top' onInput={Put_text} placeholder="Top text" type="text" />
-                    <input id="form_text_btm" onInput={Put_text} placeholder="Bottom text" type="text"/>
+                    <input
+                        className='form_text_top' 
+                        type="text" 
+                        name= 'top_text'
+                        placeholder="Top text" 
+                        value={meme.top_text}
+                        onChange={handleOnChange} 
+                    />
+                    <input 
+                        className='form_text_btm'
+                        type="text"
+                        name= 'bottom_text'
+                        placeholder="Botton text" 
+                        value={meme.bottom_text}
+                        onChange={handleOnChange} 
+                    />
                 </span>
-                <input className="form_button"type="button" onClick={GetMemeImg} value="Get a new Meme image!" />
+                <input 
+                    className="form_button"
+                    type="button" 
+                    onClick={GetMemeImg} 
+                    value="Get a new Meme image!" 
+                />
             </form>
             <div className="meme_picture">
                 <p className = "meme_toptext"> {meme.top_text} </p>

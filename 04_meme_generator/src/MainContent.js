@@ -3,20 +3,32 @@ import memedata from './memedata'
 
 export default function MainContent(){
 
-    const memesArray = memedata.data.memes
-
     const [meme, setMeme] = React.useState({
         top_text: "",
         bottom_text: "",
         random_img: "http://i.imgflip.com/1bij.jpg",
     })
 
+    const [allMemes, setAllMemes] = React.useState([])
+
+
+    React.useEffect(() =>{
+        fetch('https://api.imgflip.com/get_memes')
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    },[])
+
+    console.log(allMemes)
+
+    
     function GetMemeImg(){
-        const randomNumber = Math.floor(Math.random()*memesArray.length)
-            setMeme(prevState => ({
-                ...prevState,
-                random_img:  [memesArray[randomNumber].url] }))
+        const randomNumber = Math.floor(Math.random()* allMemes.length)
+        const url = allMemes[randomNumber].url
+        setMeme(prevState => ({
+            ...prevState,
+            random_img:  url }))
     }    
+    
 
     function handleOnChange(event){
             const{name, value} = event.target
@@ -56,11 +68,13 @@ export default function MainContent(){
                     onClick={GetMemeImg} 
                     value="Get a new Meme image!" 
                 />
-            </form>
+            </form> 
             <div className="meme_picture">
-                <p className = "meme_toptext"> {meme.top_text.toUpperCase()} </p>
-                <img className="meme_img" src= {meme.random_img} alt="Meme"/>
-                <p className = "meme_topBottom">{meme.bottom_text.toUpperCase()}</p>
+                <img className="meme_img" src= {meme.random_img} alt="Meme" />
+                <div classname = 'meme_texts'>
+                    <p className = "meme_toptext"> {meme.top_text.toUpperCase()} </p>
+                    <p className = "meme_topBottom">{meme.bottom_text.toUpperCase()}</p>
+                </div>
             </div>    
         </section>
     )

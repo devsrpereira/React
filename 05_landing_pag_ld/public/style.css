@@ -115,6 +115,7 @@
 /*Header DARK*/
 #land_hdr_dark{
     background-color: #2B283A;
+    border-bottom: 1px solid #ffffff73;
 }
 #toggler_slider_dark{
     background-color: #fff;

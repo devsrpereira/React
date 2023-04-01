@@ -2,7 +2,10 @@ import React from "react"
 
 export default function Sidebar(props) {
     const noteElements = props.notes.map((note, index) => (
-        <div key={note.id}>
+       
+
+       <div key={note.id}>
+            
             <div
                 className={`title ${
                     note.id === props.currentNote.id ? "selected-note" : ""
@@ -11,6 +14,7 @@ export default function Sidebar(props) {
             >
                 <h4 className="text-snippet"> {note.body.split("\n")[0]}</h4>
             </div>
+            
         </div>
     ))
 

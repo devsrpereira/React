@@ -17,8 +17,6 @@ export default function App() {
         localStorage.setItem("notes", JSON.stringify(notes))
     },[notes])
 
-    const notes_title = (notes[0].body.split("\n")[0])
-    
     function createNewNote() {
         const newNote = {
             id: nanoid(),
@@ -34,6 +32,13 @@ export default function App() {
                 ? { ...oldNote, body: text }
                 : oldNote
         }))
+
+        //DON'T WORK
+        // setNotes(oldNotes => oldNotes.map(oldNote => {
+        //     return oldNote.id === currentNoteId
+        //         ? { ...oldNote, body: text }
+        //         : oldNote
+        // }))
     }
     
     function findCurrentNote() {
@@ -57,6 +62,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    edited = {edited}
                 />
                 {
                     currentNoteId && 
